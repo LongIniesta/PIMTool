@@ -4,7 +4,7 @@
     {
         IQueryable<T> Get();
 
-        Task<T?> GetAsync(int id, CancellationToken cancellationToken = default);
+        Task<T?> GetAsync(decimal id, CancellationToken cancellationToken = default);
 
         Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);
 

@@ -2,5 +2,6 @@
 
 public interface IEntity
 {
-    public int Id { get; set; }
+    public decimal Id { get; set; }
+    public byte[] Version { get; set; }
 }

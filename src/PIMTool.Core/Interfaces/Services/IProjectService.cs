@@ -4,6 +4,6 @@ namespace PIMTool.Core.Interfaces.Services
 {
     public interface IProjectService
     {
-        Task<Project?> GetAsync(int id, CancellationToken cancellationToken = default);
+        Task<Project?> GetAsync(decimal id, CancellationToken cancellationToken = default);
     }
 }

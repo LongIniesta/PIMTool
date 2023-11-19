@@ -13,7 +13,7 @@ namespace PIMTool.Services
             _repository = repository;
         }
 
-        public async Task<Project?> GetAsync(int id, CancellationToken cancellationToken = default)
+        public async Task<Project?> GetAsync(decimal id, CancellationToken cancellationToken = default)
         {
             var entity = await _repository.GetAsync(id, cancellationToken);
             return entity;

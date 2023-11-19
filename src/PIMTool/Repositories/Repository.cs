@@ -7,10 +7,10 @@ namespace PIMTool.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class, IEntity
     {
-        private readonly PimContext _pimContext;
+        private readonly PIMDBContext _pimContext;
         private readonly DbSet<T> _set;
 
-        public Repository(PimContext pimContext)
+        public Repository(PIMDBContext pimContext)
         {
             _pimContext = pimContext;
             _set = _pimContext.Set<T>();
@@ -21,7 +21,7 @@ namespace PIMTool.Repositories
             return _set.Where(x => true);
         }
 
-        public async Task<T?> GetAsync(int id, CancellationToken cancellationToken = default)
+        public async Task<T?> GetAsync(decimal id, CancellationToken cancellationToken = default)
         {
             return await Get().SingleOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
